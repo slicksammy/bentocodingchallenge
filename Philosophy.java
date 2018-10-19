@@ -32,7 +32,7 @@ public class Philosophy {
             loadPage();
             
             if (this.error) {
-                System.out.println(this.error);
+                System.out.println(this.errorMessage);
                 break;  
             }
         
@@ -95,7 +95,7 @@ public class Philosophy {
             StringWriter writer = new StringWriter();
             PrintWriter printWriter = new PrintWriter(writer);
             exception.printStackTrace(printWriter);
-            System.out.println("Exception in String is :: " + writer.toString());
+            // System.out.println("Exception in String is :: " + writer.toString());
             this.error = true;
             this.errorMessage = "Exception in String is :: " + writer.toString();
         }
